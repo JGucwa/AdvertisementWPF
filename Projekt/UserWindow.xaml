@@ -1,0 +1,97 @@
+﻿<Window x:Class="Projekt.UserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt"
+        mc:Ignorable="d"
+        Title="UserWindow" Height="600" Width="1000">
+    <ScrollViewer>
+        <StackPanel x:Name="UserContent">
+            <StackPanel Orientation="Horizontal">
+                <Image Width="300" Height="100" Source="/LOGOPROJEKT.png"/>
+            </StackPanel>
+            <Button Content="Zmień hasło" Width="200" Height="40" Background="Gray" Click="ChangePass" Foreground="White" HorizontalAlignment="Left" Margin="10"/>
+            <Button Content="Wyloguj się" Width="200" Height="40" Background="Gray" Click="Logout" Foreground="White" HorizontalAlignment="Left" Margin="10"/>
+            <StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="800" Height="1"/>
+                <StackPanel Margin="20" Orientation="Horizontal">
+                    <Label Content="Imie:" FontSize="18" Width="150"/>
+                    <TextBox x:Name="firstname" Text="{Binding Firstname}" FontSize="18" Width="300" VerticalContentAlignment="Center"/>
+                    <Label Content="Nazwisko:" FontSize="18" Width="150"/>
+                    <TextBox x:Name="surname" Text="{Binding Surname}" FontSize="18" Width="300" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="800" Height="1"/>
+                <StackPanel Margin="20" Orientation="Horizontal">
+                    <Label Content="Email:" FontSize="18" Width="150"/>
+                    <TextBox x:Name="email" Text="{Binding Email}" FontSize="18" Width="300" VerticalContentAlignment="Center"/>
+                    <Label Content="Numer:" FontSize="18" Width="150"/>
+                    <TextBox x:Name="number" Text="{Binding Number}" FontSize="18" Width="300" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="800" Height="1"/>
+                <StackPanel Margin="20" Orientation="Horizontal">
+                    <Label Content="Data urodzenia:" FontSize="18" Width="150"/>
+                    <DatePicker x:Name="birthdate" Text="{Binding Birth_Date}" FontSize="18" Width="300" VerticalContentAlignment="Center"/>
+                    <Label Content="Adres:" FontSize="18" Width="150"/>
+                    <TextBox x:Name="address" Text="{Binding Address}" FontSize="18" Width="300" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="800" Height="1"/>
+                <StackPanel Margin="20" Orientation="Horizontal">
+                    <Label Content="Stanowisko:" FontSize="18" Width="150"/>
+                    <TextBox x:Name="actual_position" Text="{Binding Actual_position}" FontSize="18" Width="300" VerticalContentAlignment="Center"/>
+                    <Label Content="Opis stanowiska:" FontSize="18" Width="150"/>
+                    <TextBox x:Name="position_description" Text="{Binding Position_description}" FontSize="18" Width="300" VerticalContentAlignment="Center"/>
+                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="800" Height="1"/>
+                <StackPanel Margin="20" Orientation="Horizontal" >
+                    <Label Content="Doswiadczenie" FontSize="18" Width="150"/>
+                    <StackPanel x:Name="experience">
+                        <TextBox x:Name="exp0" FontSize="18" Width="300" Height="40" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" VerticalContentAlignment="Center"/>
+                        <Button x:Name="addbtn0" Content="+" FontSize="20" Width="40" Height="40" Click="ExperienceAdd" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="800" Height="1"/>
+                <StackPanel Margin="20" Orientation="Horizontal" >
+                    <Label Content="Edukacja" FontSize="18" Width="150"/>
+                    <StackPanel x:Name="education">
+                        <TextBox x:Name="edu0" FontSize="18" Width="300" Height="40" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" VerticalContentAlignment="Center"/>
+                        <Button x:Name="addbtn1" Content="+" FontSize="20" Width="40" Height="40" Click="EducationAdd" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="800" Height="1"/>
+                <StackPanel Margin="20" Orientation="Horizontal" >
+                    <Label Content="Języki" FontSize="18" Width="150"/>
+                    <StackPanel x:Name="languages">
+                        <TextBox x:Name="lan0" FontSize="18" Width="300" Height="40" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" VerticalContentAlignment="Center"/>
+                        <Button x:Name="addbtn2" Content="+" FontSize="20" Width="40" Height="40" Click="LanguagesAdd" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="800" Height="1"/>
+                <StackPanel Margin="20" Orientation="Horizontal" >
+                    <Label Content="Umiejętności" FontSize="18" Width="150"/>
+                    <StackPanel x:Name="skills">
+                        <TextBox x:Name="skl0" FontSize="18" Width="300" Height="40" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" VerticalContentAlignment="Center"/>
+                        <Button x:Name="addbtn3" Content="+" FontSize="20" Width="40" Height="40" Click="SkillsAdd" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="800" Height="1"/>
+                <StackPanel Margin="20" Orientation="Horizontal" >
+                    <Label Content="Kursy" FontSize="18" Width="150"/>
+                    <StackPanel x:Name="courses">
+                        <TextBox x:Name="cur0" FontSize="18" Width="300" Height="40" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" VerticalContentAlignment="Center"/>
+                        <Button x:Name="addbtn4" Content="+" FontSize="20" Width="40" Height="40" Click="CoursesAdd" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </StackPanel>
+                <Border BorderBrush="Black" BorderThickness="1" Width="800" Height="1"/>
+                <StackPanel Margin="20" Orientation="Horizontal" >
+                    <Label Content="Linki" FontSize="18" Width="150"/>
+                    <StackPanel x:Name="links">
+                        <TextBox x:Name="lnk0" FontSize="18" Width="300" Height="40" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" VerticalContentAlignment="Center"/>
+                        <Button x:Name="addbtn5" Content="+" FontSize="20" Width="40" Height="40" Click="LinksAdd" HorizontalAlignment="Left"/>
+                    </StackPanel>
+                </StackPanel>
+                <Button Content="Edytuj dane" Width="300" Height="50" Background="DodgerBlue" Click="Change"/>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Window>

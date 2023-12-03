@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="agreement.png" />
+    <None Remove="expired.png" />
+    <None Remove="job.png" />
+    <None Remove="level.png" />
+    <None Remove="localization.png" />
+    <None Remove="LOGOPROJEKT.png" />
+    <None Remove="type.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.5.1" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="7.0.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="agreement.png" />
+    <Resource Include="expired.png" />
+    <Resource Include="job.png" />
+    <Resource Include="level.png" />
+    <Resource Include="localization.png" />
+    <Resource Include="LOGOPROJEKT.png" />
+    <Resource Include="type.png" />
+  </ItemGroup>
+
+</Project>
