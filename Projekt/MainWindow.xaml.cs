@@ -31,6 +31,137 @@ namespace Projekt
         {
             InitializeComponent();
 
+            /*Przykladowe dane
+            DB.AddCategory(new Category() { Name = "IT" });
+            DB.AddCategory(new Category() { Name = "Finanse" });
+            DB.AddCategory(new Category() { Name = "Marketing" });
+            DB.AddCategory(new Category() { Name = "Inżynieria" });
+            DB.AddCategory(new Category() { Name = "Medycyna" });
+            DB.AddCategory(new Category() { Name = "Edukacja" });
+            DB.AddCategory(new Category() { Name = "Sztuka i Rozrywka" });
+            DB.AddCategory(new Category() { Name = "Handel" });
+            DB.AddCategory(new Category() { Name = "Prawo" });
+            DB.AddCategory(new Category() { Name = "Nauki Społeczne" });
+            DB.AddCategory(new Category() { Name = "Budownictwo" });
+            DB.AddOffer(new Offer()
+            {
+                Description = "Zapraszamy do doświadczonego zespołu IT!",
+                Title = "Architekt Systemów",
+                Company_Id = 0,
+                Position_name = "Cloud Solutions Architect",
+                Position_level = "ekspert",
+                Type_of_contract = "umowa o pracę na czas nieokreślony",
+                Employment = "pełny etat",
+                Type_of_Job = "praca zdalna",
+                Salary = "9000-12000",
+                Days = "poniedziałek-piątek",
+                Hours = "9:00-17:30",
+                Category = "IT",
+                Duties = new List<string> { "Projektowanie i implementacja rozwiązań chmurowych", "Zarządzanie infrastrukturą chmurową", "Współpraca z klientami w zakresie architektury IT" },
+                Requirements = new List<string> { "Doświadczenie w roli Architekta Systemów", "Znajomość platformy chmurowej AWS", "Certyfikat AWS Certified Solutions Architect" },
+                Benefits = new List<string> { "Elastyczny czas pracy", "Premie za osiągnięcia", "Karta lunchowa", "Pakiet socjalny" },
+                Application_Count = 0
+            });
+            DB.AddOffer(new Offer
+            {
+                Description = "Dynamiczna firma IT poszukuje programisty do zespołu!",
+                Title = "Programista Java - Junior",
+                Company_Id = 0,
+                Position_name = "Java Developer",
+                Position_level = "junior",
+                Type_of_contract = "umowa o pracę na czas nieokreślony",
+                Employment = "pełny etat",
+                Type_of_Job = "praca stacjonarna",
+                Salary = "5000-7000",
+                Days = "poniedziałek-piątek",
+                Hours = "8:00-16:00",
+                Category = "IT",
+                Duties = new List<string> { "Rozwój aplikacji w języku Java", "Testowanie i utrzymanie oprogramowania", "Współpraca z zespołem programistycznym" },
+                Requirements = new List<string> { "Znajomość języka Java", "Podstawowa wiedza z zakresu programowania", "Chęć rozwoju w obszarze IT" },
+                Benefits = new List<string> { "Dofinansowanie do kursów", "Elastyczne godziny pracy", "Opieka medyczna", "Integracje firmowe" },
+                Application_Count = 0
+            });
+
+            DB.AddOffer(new Offer
+            {
+                Description = "Innowacyjna firma IT poszukuje specjalisty ds. baz danych!",
+                Title = "Administrator baz danych - SQL",
+                Company_Id = 0,
+                Position_name = "Database Administrator",
+                Position_level = "średniozaawansowany",
+                Type_of_contract = "umowa o pracę na czas określony",
+                Employment = "pełny etat",
+                Type_of_Job = "praca hybrydowa",
+                Salary = "6500-8500",
+                Days = "poniedziałek-piątek",
+                Hours = "9:00-17:30",
+                Category = "IT",
+                Duties = new List<string> { "Administrowanie bazami danych", "Optymalizacja i monitorowanie wydajności", "Wsparcie w zakresie problemów z bazą danych" },
+                Requirements = new List<string> { "Doświadczenie w administrowaniu bazami danych SQL", "Znajomość języka SQL", "Dobra organizacja pracy" },
+                Benefits = new List<string> { "Prywatna opieka zdrowotna", "Szkolenia branżowe", "Karta multisport", "Premie za wyniki" },
+                Application_Count = 0
+            });
+            DB.AddOffer(new Offer
+            {
+                Description = "Międzynarodowy bank poszukuje doświadczonego analityka finansowego!",
+                Title = "Analityk Finansowy",
+                Company_Id = -1,
+                Position_name = "Analityk Finansowy",
+                Position_level = "średniozaawansowany",
+                Type_of_contract = "umowa o pracę na czas nieokreślony",
+                Employment = "pełny etat",
+                Type_of_Job = "praca stacjonarna",
+                Salary = "8000-10000",
+                Days = "poniedziałek-piątek",
+                Hours = "9:00-17:00",
+                Category = "Finanse",
+                Duties = new List<string> { "Analiza danych finansowych", "Przygotowywanie raportów i prognoz finansowych", "Współpraca z zespołem księgowym" },
+                Requirements = new List<string> { "Doświadczenie w analizie finansowej", "Znajomość rachunkowości", "Dobra znajomość Excela" },
+                Benefits = new List<string> { "Opieka medyczna", "Karta multisport", "Premie za wyniki", "Dofinansowanie do szkoleń" },
+                Application_Count = 7
+            });
+
+            DB.AddOffer(new Offer
+            {
+                Description = "Dynamiczna agencja marketingowa poszukuje kreatywnego copywritera!",
+                Title = "Copywriter",
+                Company_Id = -1,
+                Position_name = "Copywriter",
+                Position_level = "junior",
+                Type_of_contract = "umowa o pracę na czas określony",
+                Employment = "pełny etat",
+                Type_of_Job = "praca hybrydowa",
+                Salary = "5500-7000",
+                Days = "poniedziałek-piątek",
+                Hours = "8:30-16:30",
+                Category = "Marketing",
+                Duties = new List<string> { "Tworzenie treści reklamowych i marketingowych", "Przygotowywanie tekstów na strony internetowe", "Współpraca z zespołem kreatywnym" },
+                Requirements = new List<string> { "Znajomość technik copywritingu", "Kreatywność i zdolności redakcyjne", "Podstawowa wiedza z zakresu marketingu" },
+                Benefits = new List<string> { "Elastyczne godziny pracy", "Home office", "Dofinansowanie do kursów językowych", "Integracje firmowe" },
+                Application_Count = 4
+            });
+
+            DB.AddOffer(new Offer
+            {
+                Description = "Prężna szkoła językowa poszukuje nauczyciela angielskiego!",
+                Title = "Nauczyciel Języka Angielskiego",
+                Company_Id = -1,
+                Position_name = "Nauczyciel",
+                Position_level = "średniozaawansowany",
+                Type_of_contract = "umowa o pracę na czas nieokreślony",
+                Employment = "pełny etat",
+                Type_of_Job = "praca stacjonarna",
+                Salary = "6000-8000",
+                Days = "poniedziałek-piątek",
+                Hours = "10:00-18:00",
+                Category = "Edukacja",
+                Duties = new List<string> { "Nauczanie języka angielskiego", "Przygotowywanie lekcji i materiałów dydaktycznych", "Współpraca z uczniami i rodzicami" },
+                Requirements = new List<string> { "Biegła znajomość języka angielskiego", "Doświadczenie w nauczaniu", "Dyplom pedagogiczny lub filologiczny" },
+                Benefits = new List<string> { "Dofinansowanie do kursów językowych", "Pakiet socjalny", "Opieka medyczna", "Wakacje szkoleniowe" },
+                Application_Count = 6
+            });
+
+            DB.AddCompany(new Company() { Name = "I&P",Password = "12345678" }); */
 
             OffertsCount.Content = DB.GetOffers().Count;
 

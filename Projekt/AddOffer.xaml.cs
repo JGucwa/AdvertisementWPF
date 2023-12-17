@@ -19,6 +19,7 @@ namespace Projekt
     /// </summary>
     public partial class AddOffer : Window
     {
+        
         MainWindow mainwindow;
         List<string> ReqList = new List<string>();
         List<TextBox> ReqListTB = new List<TextBox>();
@@ -31,6 +32,9 @@ namespace Projekt
             this.mainwindow = mainwindow;
             InitializeComponent();
 
+            ReqListTB.Add(req0);
+            DutListTB.Add(dut0);
+            BenListTB.Add(ben0);
             List<Category> Categories = new Database().GetCategory();
 
             for(int i = 0;i < Categories.Count; i++)
